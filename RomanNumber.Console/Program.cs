@@ -1,26 +1,23 @@
-﻿using System;
-
-namespace RomanNumber
+﻿namespace RomanNumber.Console
 {
-    using Core;
+    using System;
+    using RomanNumber.Core;
 
     class Program
     {
-        private static bool continueToPlay = true;
-
         static void Main(string[] args)
         {
             Console.WriteLine("To exit the program, type 'exit' or press ctrl-C");
             var romanNumber = new RomanNumber();
-            Console.CancelKeyPress += (_, e) => Environment.Exit(1);
+            Console.CancelKeyPress += (_, e) => Exit();
             
-            while (continueToPlay)
+            while (true)
             {
-                Console.Write("Enter the number that you want to translate: ");
+                Console.Write("Enter the number that you want to convert: ");
                 var line = Console.ReadLine();
-                if (continueToPlay == false || line == "exit")
+                if (line == "exit")
                 {
-                    continueToPlay = false;
+                    Exit();
                 }
                 else
                 {
@@ -29,8 +26,12 @@ namespace RomanNumber
                         : $"The input {line} is not a number.");
                 }
             }
+        }
 
+        static void Exit()
+        {
             Console.WriteLine("See you soon!! <3");
+            Environment.Exit(1);
         }
     }
 }
