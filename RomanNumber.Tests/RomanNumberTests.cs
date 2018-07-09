@@ -5,7 +5,7 @@ namespace RomanNumber.Tests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class RomanNumerTests
+    public class RomanNumberTests
     {
         private readonly RomanNumber romanNumber;
 
