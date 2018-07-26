@@ -9,7 +9,7 @@ namespace RomanNumber.Tests
     {
         private readonly RomanNumber romanNumber;
 
-        public RomanNumerTests()
+        public RomanNumberTests()
         {
             this.romanNumber = new RomanNumber();
         }
